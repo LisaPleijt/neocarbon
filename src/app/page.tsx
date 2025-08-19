@@ -1,17 +1,20 @@
-import { Button } from '@/components/ui'
-import { ArrowRight, Github, ExternalLink } from 'lucide-react'
-
 export default function Home() {
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* NeoCarbon Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-neocarbon-dark-teal via-neocarbon-mid-teal to-neocarbon-green-teal" />
+      <div className="absolute inset-0" style={{
+        background: 'linear-gradient(180deg, #011C1E 0%, #02272A 50%, #0F3229 100%)'
+      }} />
       
       {/* Bottom right radial glow */}
-      <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-gradient-radial from-neocarbon-glow-start via-neocarbon-glow-end to-transparent opacity-60" />
+      <div className="absolute bottom-0 right-0 w-[800px] h-[800px]" style={{
+        background: 'radial-gradient(circle at center, rgba(26, 58, 45, 0.6) 0%, rgba(42, 106, 76, 0.4) 50%, transparent 100%)'
+      }} />
       
-      {/* Top center vignette */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[600px] h-[400px] bg-gradient-radial from-black via-transparent to-transparent opacity-20" />
+      {/* Top center vignette - reduced opacity */}
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[600px] h-[400px]" style={{
+        background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%, transparent 70%)'
+      }} />
       
       {/* Square Grid - Top layer (brighter) */}
       <div 
@@ -46,16 +49,15 @@ export default function Home() {
               Neocarbon
             </div>
             <div className="flex items-center gap-4">
-              <Button variant="ghost" size="sm" className="text-white hover:bg-white/10">
+              <button className="px-3 py-2 text-white hover:bg-white/10 rounded">
                 About
-              </Button>
-              <Button variant="ghost" size="sm" className="text-white hover:bg-white/10">
+              </button>
+              <button className="px-3 py-2 text-white hover:bg-white/10 rounded">
                 Contact
-              </Button>
-              <Button variant="outline" size="sm" className="text-white border-white/20 hover:bg-white/10">
-                <Github className="w-4 h-4 mr-2" />
+              </button>
+              <button className="px-3 py-2 text-white border border-white/20 hover:bg-white/10 rounded">
                 GitHub
-              </Button>
+              </button>
             </div>
           </nav>
         </header>
@@ -65,7 +67,12 @@ export default function Home() {
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Welcome to{' '}
-              <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+              <span style={{
+                background: 'linear-gradient(90deg, #34D399 0%, #22D3EE 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}>
                 Neocarbon
               </span>
             </h1>
@@ -73,14 +80,12 @@ export default function Home() {
               A modern Next.js application built with TypeScript, Tailwind CSS, and optimized for Vercel deployment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="group bg-emerald-600 hover:bg-emerald-700 text-white">
-                Get Started
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg" className="text-white border-white/30 hover:bg-white/10">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                View Demo
-              </Button>
+              <button className="px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-medium">
+                Get Started →
+              </button>
+              <button className="px-8 py-3 text-white border border-white/30 hover:bg-white/10 rounded-lg">
+                View Demo ↗
+              </button>
             </div>
           </div>
         </main>
@@ -93,10 +98,10 @@ export default function Home() {
                 <span className="text-2xl">⚡</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">
-                Next.js 15
+                Next.js 14
               </h3>
               <p className="text-slate-300">
-                Built with the latest Next.js features including App Router and Turbopack.
+                Built with the latest Next.js features including App Router and modern React patterns.
               </p>
             </div>
             
@@ -120,7 +125,7 @@ export default function Home() {
                 Vercel Ready
               </h3>
               <p className="text-slate-300">
-                Optimized for deployment with Vercel Analytics and Speed Insights.
+                Optimized for deployment with modern web standards.
               </p>
             </div>
           </div>

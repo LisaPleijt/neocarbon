@@ -1,66 +1,43 @@
 # Neocarbon
 
-A modern Next.js application built with TypeScript, Tailwind CSS, and optimized for Vercel deployment.
+A lean, modern Next.js application built with TypeScript and Tailwind CSS, optimized for Vercel deployment.
 
 ## Features
 
-- ⚡ **Next.js 15** with App Router
-- 🎨 **Tailwind CSS 4** for styling
-- 🔧 **TypeScript** for type safety
-- 📱 **Responsive design** with mobile-first approach
-- 🚀 **Vercel Analytics** and **Speed Insights** for performance monitoring
-- 🎯 **ESLint** and **Prettier** for code quality
-- 🔍 **Lucide React** for beautiful icons
+- ⚡ **Next.js 14** - Latest stable version with App Router
+- 🎨 **Tailwind CSS** - Utility-first CSS framework
+- 🚀 **Vercel Ready** - Optimized for deployment
+- 📱 **Responsive Design** - Mobile-first approach
+- 🎯 **TypeScript** - Full type safety
+
+## Tech Stack
+
+- **Framework**: Next.js 14.2.32
+- **Language**: TypeScript 5.4.3
+- **Styling**: Tailwind CSS 3.4.3
+- **Deployment**: Vercel
 
 ## Getting Started
 
-### Prerequisites
+1. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-- Node.js 18+ 
-- npm or yarn
+2. **Run development server**
+   ```bash
+   npm run dev
+   ```
 
-### Installation
+3. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-1. Clone the repository:
-```bash
-git clone <your-repo-url>
-cd neocarbon
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Run the development server:
-```bash
-npm run dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## Available Scripts
-
-- `npm run dev` - Start development server with Turbopack
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-
-## Project Structure
-
-```
-neocarbon/
-├── src/
-│   ├── app/           # App Router pages and layouts
-│   ├── components/    # Reusable UI components
-│   ├── lib/          # Utility functions and configurations
-│   └── styles/       # Global styles and Tailwind config
-├── public/            # Static assets
-├── .prettierrc       # Prettier configuration
-├── next.config.ts    # Next.js configuration
-├── tailwind.config.ts # Tailwind CSS configuration
-└── tsconfig.json     # TypeScript configuration
-```
+4. **Start production server**
+   ```bash
+   npm start
+   ```
 
 ## Deployment
 
@@ -70,27 +47,26 @@ This project is optimized for Vercel deployment:
 2. Connect your repository to Vercel
 3. Deploy automatically on every push
 
-The project includes:
-- `@vercel/analytics` for analytics
-- `@vercel/speed-insights` for performance monitoring
-- Optimized build configuration
+## Project Structure
 
-## Technologies Used
+```
+src/
+├── app/
+│   ├── globals.css      # Global styles with Tailwind
+│   ├── layout.tsx       # Root layout component
+│   └── page.tsx         # Home page component
+├── components/          # Reusable components (if needed)
+└── lib/                 # Utility functions (if needed)
+```
 
-- [Next.js](https://nextjs.org/) - React framework
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
-- [Lucide React](https://lucide.dev/) - Beautiful icons
-- [Vercel](https://vercel.com/) - Deployment platform
+## Why This Setup?
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
+- **Minimal Dependencies**: Only essential packages for stability
+- **No External Icons**: Uses HTML entities and simple styling
+- **Pure CSS Gradients**: Smooth, non-blocky visual effects
+- **TypeScript**: Full type safety without complexity
+- **Vercel Optimized**: Built specifically for Vercel's platform
 
 ## License
 
-This project is licensed under the MIT License.
+MIT License - feel free to use this project as a starting point for your own applications.
